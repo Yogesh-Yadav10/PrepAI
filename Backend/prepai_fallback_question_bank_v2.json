@@ -1,0 +1,1407 @@
+{
+  "metadata": {
+    "project": "PrepAI",
+    "version": 1,
+    "level": "Fresher",
+    "description": "Fallback question bank for AI mock interviews and MCQ practice. Interview expected concepts support approximate rule-based fallback evaluation. The Python Developer question about == versus is replaces a List-versus-Tuple question already present in the existing manual database rows, avoiding a repeated fallback prompt.",
+    "interview_role_count": 5,
+    "interview_question_count": 25,
+    "mcq_topic_count": 8,
+    "mcq_question_count": 40
+  },
+  "interview_roles": {
+    "python_developer": {
+      "name": "Python Developer",
+      "difficulty": "Fresher",
+      "questions": [
+        {
+          "id": "PY-01",
+          "question": "What is the difference between == and is in Python?",
+          "expected_concepts": [
+            {
+              "concept": "== compares values for equality",
+              "keywords": [
+                "compares values",
+                "equal value",
+                "same value",
+                "equality",
+                "=="
+              ]
+            },
+            {
+              "concept": "is compares object identity",
+              "keywords": [
+                "object identity",
+                "same object",
+                "same memory location",
+                "identity",
+                "is operator"
+              ]
+            },
+            {
+              "concept": "two distinct objects can have equal values",
+              "keywords": [
+                "different objects",
+                "distinct objects",
+                "equal values",
+                "same value but different objects"
+              ]
+            }
+          ],
+          "evaluation_note": "For a fresher-level answer, award credit for explaining value equality versus object identity and giving a simple example. Do not require details about Python interning."
+        },
+        {
+          "id": "PY-02",
+          "question": "What is a dictionary in Python, and how is it different from a list?",
+          "expected_concepts": [
+            {
+              "concept": "key-value pairs",
+              "keywords": [
+                "key value",
+                "key-value",
+                "keys",
+                "values"
+              ]
+            },
+            {
+              "concept": "unique keys",
+              "keywords": [
+                "unique key",
+                "keys are unique",
+                "duplicate key"
+              ]
+            },
+            {
+              "concept": "list uses positions/indexes",
+              "keywords": [
+                "index",
+                "position",
+                "ordered sequence"
+              ]
+            },
+            {
+              "concept": "dictionary access by key",
+              "keywords": [
+                "access by key",
+                "using key",
+                "lookup by key"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "PY-03",
+          "question": "What is the purpose of functions in Python?",
+          "expected_concepts": [
+            {
+              "concept": "reusable code",
+              "keywords": [
+                "reuse",
+                "reusable",
+                "avoid repetition"
+              ]
+            },
+            {
+              "concept": "defined with def",
+              "keywords": [
+                "def keyword",
+                "def ",
+                "function definition"
+              ]
+            },
+            {
+              "concept": "parameters and arguments",
+              "keywords": [
+                "parameter",
+                "argument",
+                "input"
+              ]
+            },
+            {
+              "concept": "return value",
+              "keywords": [
+                "return",
+                "output",
+                "returns a value"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "PY-04",
+          "question": "What is exception handling in Python? Explain try and except.",
+          "expected_concepts": [
+            {
+              "concept": "runtime errors/exceptions",
+              "keywords": [
+                "exception",
+                "runtime error",
+                "error"
+              ]
+            },
+            {
+              "concept": "try contains risky code",
+              "keywords": [
+                "try block",
+                "try contains",
+                "risky code"
+              ]
+            },
+            {
+              "concept": "except handles error",
+              "keywords": [
+                "except",
+                "handles exception",
+                "catches exception"
+              ]
+            },
+            {
+              "concept": "program can continue safely",
+              "keywords": [
+                "continue",
+                "gracefully",
+                "without crashing",
+                "handle"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "PY-05",
+          "question": "What is object-oriented programming? Explain class and object in Python.",
+          "expected_concepts": [
+            {
+              "concept": "OOP organizes code around objects",
+              "keywords": [
+                "object oriented",
+                "objects",
+                "oop"
+              ]
+            },
+            {
+              "concept": "class is a blueprint",
+              "keywords": [
+                "blueprint",
+                "template",
+                "class definition"
+              ]
+            },
+            {
+              "concept": "object is an instance",
+              "keywords": [
+                "instance",
+                "object created",
+                "instance of a class"
+              ]
+            },
+            {
+              "concept": "attributes and methods",
+              "keywords": [
+                "attributes",
+                "methods",
+                "data and behaviour",
+                "behavior"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "java_developer": {
+      "name": "Java Developer",
+      "difficulty": "Fresher",
+      "questions": [
+        {
+          "id": "JAVA-01",
+          "question": "What is the difference between JDK, JRE, and JVM?",
+          "expected_concepts": [
+            {
+              "concept": "JVM executes bytecode",
+              "keywords": [
+                "java virtual machine",
+                "jvm",
+                "bytecode",
+                "executes"
+              ]
+            },
+            {
+              "concept": "JRE provides runtime libraries and JVM",
+              "keywords": [
+                "java runtime environment",
+                "jre",
+                "runtime libraries"
+              ]
+            },
+            {
+              "concept": "JDK includes development tools and JRE",
+              "keywords": [
+                "java development kit",
+                "jdk",
+                "compiler",
+                "development tools"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "JAVA-02",
+          "question": "What are the main principles of object-oriented programming?",
+          "expected_concepts": [
+            {
+              "concept": "encapsulation",
+              "keywords": [
+                "encapsulation",
+                "data hiding"
+              ]
+            },
+            {
+              "concept": "inheritance",
+              "keywords": [
+                "inheritance",
+                "reuse properties"
+              ]
+            },
+            {
+              "concept": "polymorphism",
+              "keywords": [
+                "polymorphism",
+                "many forms",
+                "overloading",
+                "overriding"
+              ]
+            },
+            {
+              "concept": "abstraction",
+              "keywords": [
+                "abstraction",
+                "hide implementation",
+                "essential features"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "JAVA-03",
+          "question": "What is the difference between method overloading and method overriding?",
+          "expected_concepts": [
+            {
+              "concept": "overloading same method name with different parameters",
+              "keywords": [
+                "overloading",
+                "same name",
+                "different parameters",
+                "compile time"
+              ]
+            },
+            {
+              "concept": "overriding redefines inherited method",
+              "keywords": [
+                "overriding",
+                "same signature",
+                "parent class",
+                "child class",
+                "runtime"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "JAVA-04",
+          "question": "What is the difference between String and StringBuilder in Java?",
+          "expected_concepts": [
+            {
+              "concept": "String is immutable",
+              "keywords": [
+                "string",
+                "immutable",
+                "cannot be changed"
+              ]
+            },
+            {
+              "concept": "StringBuilder is mutable",
+              "keywords": [
+                "stringbuilder",
+                "mutable",
+                "modified"
+              ]
+            },
+            {
+              "concept": "StringBuilder efficient for repeated modifications",
+              "keywords": [
+                "append",
+                "repeated",
+                "modification",
+                "efficient"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "JAVA-05",
+          "question": "What is exception handling in Java? Explain try, catch, and finally.",
+          "expected_concepts": [
+            {
+              "concept": "exception is an abnormal event/error",
+              "keywords": [
+                "exception",
+                "error",
+                "abnormal"
+              ]
+            },
+            {
+              "concept": "try contains code that may fail",
+              "keywords": [
+                "try block",
+                "risky code"
+              ]
+            },
+            {
+              "concept": "catch handles exception",
+              "keywords": [
+                "catch",
+                "handles",
+                "catches"
+              ]
+            },
+            {
+              "concept": "finally generally runs for cleanup",
+              "keywords": [
+                "finally",
+                "cleanup",
+                "always executes"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "aiml_engineer": {
+      "name": "AI/ML Engineer",
+      "difficulty": "Fresher",
+      "questions": [
+        {
+          "id": "AIML-01",
+          "question": "What is the difference between Artificial Intelligence, Machine Learning, and Deep Learning?",
+          "expected_concepts": [
+            {
+              "concept": "AI is the broader field",
+              "keywords": [
+                "artificial intelligence",
+                "broader",
+                "machines perform intelligent tasks"
+              ]
+            },
+            {
+              "concept": "ML learns patterns from data",
+              "keywords": [
+                "machine learning",
+                "learn from data",
+                "patterns"
+              ]
+            },
+            {
+              "concept": "DL uses multi-layer neural networks",
+              "keywords": [
+                "deep learning",
+                "neural network",
+                "multiple layers"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "AIML-02",
+          "question": "What is the difference between supervised and unsupervised learning?",
+          "expected_concepts": [
+            {
+              "concept": "supervised uses labelled data",
+              "keywords": [
+                "supervised",
+                "labelled",
+                "labeled",
+                "target/output"
+              ]
+            },
+            {
+              "concept": "unsupervised uses unlabelled data",
+              "keywords": [
+                "unsupervised",
+                "unlabelled",
+                "unlabeled",
+                "no labels"
+              ]
+            },
+            {
+              "concept": "examples such as classification/regression and clustering",
+              "keywords": [
+                "classification",
+                "regression",
+                "clustering"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "AIML-03",
+          "question": "Why do we split a dataset into training and testing sets?",
+          "expected_concepts": [
+            {
+              "concept": "training data fits the model",
+              "keywords": [
+                "training data",
+                "train",
+                "learn",
+                "fit the model"
+              ]
+            },
+            {
+              "concept": "testing data evaluates unseen data",
+              "keywords": [
+                "testing data",
+                "test set",
+                "unseen data"
+              ]
+            },
+            {
+              "concept": "measure generalisation and avoid misleading evaluation",
+              "keywords": [
+                "generalization",
+                "generalisation",
+                "performance",
+                "unseen"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "AIML-04",
+          "question": "What is overfitting in machine learning, and how can it be reduced?",
+          "expected_concepts": [
+            {
+              "concept": "model learns training data too closely",
+              "keywords": [
+                "overfitting",
+                "memorizes",
+                "memorises",
+                "training data too closely"
+              ]
+            },
+            {
+              "concept": "poor performance on unseen data",
+              "keywords": [
+                "unseen data",
+                "test data",
+                "generalize",
+                "generalise"
+              ]
+            },
+            {
+              "concept": "prevention such as regularization, more data, simpler model or cross-validation",
+              "keywords": [
+                "regularization",
+                "regularisation",
+                "more data",
+                "simpler model",
+                "cross validation",
+                "early stopping"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "AIML-05",
+          "question": "What is the difference between classification and regression? Give one example of each.",
+          "expected_concepts": [
+            {
+              "concept": "classification predicts categories/classes",
+              "keywords": [
+                "classification",
+                "class",
+                "category",
+                "categories"
+              ]
+            },
+            {
+              "concept": "regression predicts continuous numerical values",
+              "keywords": [
+                "regression",
+                "continuous",
+                "numeric value",
+                "numerical"
+              ]
+            },
+            {
+              "concept": "valid examples",
+              "keywords": [
+                "spam",
+                "price",
+                "house price",
+                "pass or fail",
+                "disease"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "full_stack_developer": {
+      "name": "Full Stack Developer",
+      "difficulty": "Fresher",
+      "questions": [
+        {
+          "id": "FS-01",
+          "question": "What is the difference between frontend and backend development?",
+          "expected_concepts": [
+            {
+              "concept": "frontend is user-facing interface",
+              "keywords": [
+                "frontend",
+                "user interface",
+                "browser",
+                "client side"
+              ]
+            },
+            {
+              "concept": "backend handles business logic and server-side work",
+              "keywords": [
+                "backend",
+                "server side",
+                "business logic",
+                "server"
+              ]
+            },
+            {
+              "concept": "frontend communicates with backend",
+              "keywords": [
+                "api",
+                "request",
+                "response",
+                "communicate"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "FS-02",
+          "question": "What happens when a user enters a website URL in a browser?",
+          "expected_concepts": [
+            {
+              "concept": "browser resolves domain using DNS",
+              "keywords": [
+                "dns",
+                "domain name",
+                "ip address",
+                "resolve"
+              ]
+            },
+            {
+              "concept": "browser establishes connection and sends request",
+              "keywords": [
+                "connection",
+                "https",
+                "http request",
+                "request"
+              ]
+            },
+            {
+              "concept": "server returns response and browser renders page",
+              "keywords": [
+                "server response",
+                "html",
+                "css",
+                "javascript",
+                "render"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "FS-03",
+          "question": "What is an API, and why is it used in a web application?",
+          "expected_concepts": [
+            {
+              "concept": "API enables communication between software components",
+              "keywords": [
+                "application programming interface",
+                "communicate",
+                "communication"
+              ]
+            },
+            {
+              "concept": "client sends request and server returns response",
+              "keywords": [
+                "request",
+                "response",
+                "client",
+                "server"
+              ]
+            },
+            {
+              "concept": "common HTTP methods",
+              "keywords": [
+                "get",
+                "post",
+                "put",
+                "delete",
+                "http methods"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "FS-04",
+          "question": "What is the difference between authentication and authorization?",
+          "expected_concepts": [
+            {
+              "concept": "authentication verifies identity",
+              "keywords": [
+                "authentication",
+                "identity",
+                "who you are",
+                "login"
+              ]
+            },
+            {
+              "concept": "authorization checks permissions/access",
+              "keywords": [
+                "authorization",
+                "permission",
+                "access",
+                "what you can do"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "FS-05",
+          "question": "How does a web application store and retrieve data from a database?",
+          "expected_concepts": [
+            {
+              "concept": "backend connects to database",
+              "keywords": [
+                "backend",
+                "database connection",
+                "connect"
+              ]
+            },
+            {
+              "concept": "queries or ORM perform CRUD operations",
+              "keywords": [
+                "sql",
+                "query",
+                "orm",
+                "crud",
+                "select",
+                "insert",
+                "update",
+                "delete"
+              ]
+            },
+            {
+              "concept": "returns data to frontend through response/API",
+              "keywords": [
+                "api",
+                "response",
+                "json",
+                "frontend"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pharma_production": {
+      "name": "Pharma Production",
+      "difficulty": "Fresher",
+      "questions": [
+        {
+          "id": "PHARMA-01",
+          "question": "What is GMP, and why is it important in pharmaceutical manufacturing?",
+          "expected_concepts": [
+            {
+              "concept": "GMP means Good Manufacturing Practices",
+              "keywords": [
+                "good manufacturing practice",
+                "good manufacturing practices",
+                "gmp"
+              ]
+            },
+            {
+              "concept": "ensures consistent product quality",
+              "keywords": [
+                "quality",
+                "consistent",
+                "standard"
+              ]
+            },
+            {
+              "concept": "protects patient safety and product integrity",
+              "keywords": [
+                "patient safety",
+                "safety",
+                "contamination",
+                "identity",
+                "strength",
+                "purity"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "PHARMA-02",
+          "question": "What is an SOP, and why should production staff follow it?",
+          "expected_concepts": [
+            {
+              "concept": "SOP means Standard Operating Procedure",
+              "keywords": [
+                "standard operating procedure",
+                "sop"
+              ]
+            },
+            {
+              "concept": "provides approved step-by-step instructions",
+              "keywords": [
+                "procedure",
+                "instructions",
+                "steps",
+                "approved"
+              ]
+            },
+            {
+              "concept": "ensures consistency, traceability and compliance",
+              "keywords": [
+                "consistency",
+                "traceability",
+                "compliance",
+                "documentation"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "PHARMA-03",
+          "question": "What is a Batch Manufacturing Record (BMR), and what information does it contain?",
+          "expected_concepts": [
+            {
+              "concept": "BMR records manufacturing details for a batch",
+              "keywords": [
+                "batch manufacturing record",
+                "bmr",
+                "batch record"
+              ]
+            },
+            {
+              "concept": "includes materials, quantities and process steps",
+              "keywords": [
+                "materials",
+                "quantity",
+                "quantities",
+                "process steps",
+                "equipment"
+              ]
+            },
+            {
+              "concept": "includes dates, operators and checks/signatures",
+              "keywords": [
+                "date",
+                "operator",
+                "signature",
+                "check",
+                "record"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "PHARMA-04",
+          "question": "What is line clearance, and when is it performed?",
+          "expected_concepts": [
+            {
+              "concept": "checks area/equipment is free from previous product/materials",
+              "keywords": [
+                "previous product",
+                "previous batch",
+                "materials",
+                "labels",
+                "clean"
+              ]
+            },
+            {
+              "concept": "prevents mix-ups and cross-contamination",
+              "keywords": [
+                "mix up",
+                "mix-up",
+                "cross contamination",
+                "contamination"
+              ]
+            },
+            {
+              "concept": "performed before starting a new batch or operation",
+              "keywords": [
+                "before starting",
+                "new batch",
+                "before production"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "PHARMA-05",
+          "question": "What should an operator do after noticing a deviation from an approved production procedure?",
+          "expected_concepts": [
+            {
+              "concept": "report deviation immediately to supervisor/quality unit",
+              "keywords": [
+                "report",
+                "inform supervisor",
+                "quality assurance",
+                "qa"
+              ]
+            },
+            {
+              "concept": "document facts accurately; do not hide or alter records",
+              "keywords": [
+                "document",
+                "record",
+                "accurate",
+                "do not alter",
+                "do not hide"
+              ]
+            },
+            {
+              "concept": "follow investigation and CAPA process",
+              "keywords": [
+                "investigation",
+                "capa",
+                "corrective action",
+                "preventive action"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "mcq_topics": {
+    "oops": {
+      "name": "OOPs",
+      "questions": [
+        {
+          "id": "MCQ-OOPS-01",
+          "question": "Which OOP principle bundles data and the methods that operate on that data into one unit?",
+          "options": {
+            "A": "Inheritance",
+            "B": "Encapsulation",
+            "C": "Polymorphism",
+            "D": "Compilation"
+          },
+          "correct_option": "B",
+          "explanation": "Encapsulation combines data and related methods in a class and controls access to internal state."
+        },
+        {
+          "id": "MCQ-OOPS-02",
+          "question": "Which OOP concept allows a class to acquire properties and methods from another class?",
+          "options": {
+            "A": "Inheritance",
+            "B": "Abstraction",
+            "C": "Encapsulation",
+            "D": "Overloading"
+          },
+          "correct_option": "A",
+          "explanation": "Inheritance lets a child class reuse or extend features of a parent class."
+        },
+        {
+          "id": "MCQ-OOPS-03",
+          "question": "What is an object in object-oriented programming?",
+          "options": {
+            "A": "A database query",
+            "B": "An instance of a class",
+            "C": "A programming language",
+            "D": "A loop"
+          },
+          "correct_option": "B",
+          "explanation": "A class is a blueprint; an object is a particular instance created from that class."
+        },
+        {
+          "id": "MCQ-OOPS-04",
+          "question": "Which concept means showing essential features while hiding implementation details?",
+          "options": {
+            "A": "Inheritance",
+            "B": "Polymorphism",
+            "C": "Abstraction",
+            "D": "Instantiation"
+          },
+          "correct_option": "C",
+          "explanation": "Abstraction exposes necessary operations while hiding internal implementation details."
+        },
+        {
+          "id": "MCQ-OOPS-05",
+          "question": "Polymorphism generally means:",
+          "options": {
+            "A": "One interface, many possible forms",
+            "B": "A class has no methods",
+            "C": "Data is stored only in files",
+            "D": "A program has one variable"
+          },
+          "correct_option": "A",
+          "explanation": "Polymorphism allows the same interface or method call to behave differently for different objects."
+        }
+      ]
+    },
+    "dbms": {
+      "name": "DBMS",
+      "questions": [
+        {
+          "id": "MCQ-DBMS-01",
+          "question": "Which key uniquely identifies each row in a table?",
+          "options": {
+            "A": "Foreign key",
+            "B": "Primary key",
+            "C": "Candidate value",
+            "D": "Duplicate key"
+          },
+          "correct_option": "B",
+          "explanation": "A primary key uniquely identifies each row and cannot contain NULL values."
+        },
+        {
+          "id": "MCQ-DBMS-02",
+          "question": "Which SQL command is used to retrieve data from a table?",
+          "options": {
+            "A": "UPDATE",
+            "B": "DELETE",
+            "C": "SELECT",
+            "D": "INSERT"
+          },
+          "correct_option": "C",
+          "explanation": "SELECT retrieves rows and columns from one or more tables."
+        },
+        {
+          "id": "MCQ-DBMS-03",
+          "question": "Which JOIN returns rows with matching values in both tables?",
+          "options": {
+            "A": "INNER JOIN",
+            "B": "CROSS JOIN",
+            "C": "FULL OUTER JOIN",
+            "D": "SELF JOIN"
+          },
+          "correct_option": "A",
+          "explanation": "INNER JOIN returns only rows that satisfy the join condition in both tables."
+        },
+        {
+          "id": "MCQ-DBMS-04",
+          "question": "What is the main purpose of database normalization?",
+          "options": {
+            "A": "Increase duplicate data",
+            "B": "Reduce redundancy and update anomalies",
+            "C": "Remove all table relationships",
+            "D": "Encrypt every column"
+          },
+          "correct_option": "B",
+          "explanation": "Normalization organizes data to reduce unnecessary duplication and insertion, update, and deletion anomalies."
+        },
+        {
+          "id": "MCQ-DBMS-05",
+          "question": "Which ACID property ensures that a transaction is completed fully or not applied at all?",
+          "options": {
+            "A": "Consistency",
+            "B": "Isolation",
+            "C": "Durability",
+            "D": "Atomicity"
+          },
+          "correct_option": "D",
+          "explanation": "Atomicity makes a transaction all-or-nothing: either all its operations succeed or none are applied."
+        }
+      ]
+    },
+    "technical_fundamentals": {
+      "name": "Technical Fundamentals",
+      "questions": [
+        {
+          "id": "MCQ-TF-01",
+          "question": "Which component is commonly called the brain of a computer?",
+          "options": {
+            "A": "RAM",
+            "B": "CPU",
+            "C": "Hard disk",
+            "D": "Monitor"
+          },
+          "correct_option": "B",
+          "explanation": "The CPU executes instructions and performs calculations and control operations."
+        },
+        {
+          "id": "MCQ-TF-02",
+          "question": "Which memory loses its contents when the computer is switched off?",
+          "options": {
+            "A": "ROM",
+            "B": "SSD",
+            "C": "RAM",
+            "D": "Hard disk"
+          },
+          "correct_option": "C",
+          "explanation": "RAM is volatile memory, so its stored contents are lost when power is removed."
+        },
+        {
+          "id": "MCQ-TF-03",
+          "question": "What is the main purpose of an operating system?",
+          "options": {
+            "A": "Only to create presentations",
+            "B": "Manage hardware and software resources",
+            "C": "Only to browse websites",
+            "D": "Replace the CPU"
+          },
+          "correct_option": "B",
+          "explanation": "An operating system manages processes, memory, files, devices, and provides services to applications."
+        },
+        {
+          "id": "MCQ-TF-04",
+          "question": "What does a compiler generally do?",
+          "options": {
+            "A": "Translates source code into another form, often machine or intermediate code",
+            "B": "Cleans the monitor",
+            "C": "Stores data permanently",
+            "D": "Connects a computer to Wi-Fi"
+          },
+          "correct_option": "A",
+          "explanation": "A compiler translates source code into target code or an intermediate representation so it can be executed."
+        },
+        {
+          "id": "MCQ-TF-05",
+          "question": "What is an algorithm?",
+          "options": {
+            "A": "A type of computer cable",
+            "B": "A finite set of steps to solve a problem",
+            "C": "A storage device",
+            "D": "A web browser"
+          },
+          "correct_option": "B",
+          "explanation": "An algorithm is a finite, well-defined sequence of steps for solving a problem."
+        }
+      ]
+    },
+    "operating_systems": {
+      "name": "Operating Systems",
+      "questions": [
+        {
+          "id": "MCQ-OS-01",
+          "question": "What is a process?",
+          "options": {
+            "A": "A program currently in execution",
+            "B": "A file extension",
+            "C": "A type of database",
+            "D": "A network cable"
+          },
+          "correct_option": "A",
+          "explanation": "A process is a program in execution along with its state and allocated resources."
+        },
+        {
+          "id": "MCQ-OS-02",
+          "question": "Which scheduling algorithm gives each process a fixed time slice in turn?",
+          "options": {
+            "A": "First Come First Served",
+            "B": "Priority Scheduling",
+            "C": "Round Robin",
+            "D": "Shortest Job First"
+          },
+          "correct_option": "C",
+          "explanation": "Round Robin assigns each ready process a time quantum in cyclic order."
+        },
+        {
+          "id": "MCQ-OS-03",
+          "question": "What is deadlock?",
+          "options": {
+            "A": "A process finishing normally",
+            "B": "Processes waiting indefinitely for resources held by each other",
+            "C": "A computer starting quickly",
+            "D": "A file being deleted"
+          },
+          "correct_option": "B",
+          "explanation": "Deadlock occurs when processes are stuck waiting for resources in a way that prevents progress."
+        },
+        {
+          "id": "MCQ-OS-04",
+          "question": "Which memory management technique uses fixed-size blocks called pages?",
+          "options": {
+            "A": "Paging",
+            "B": "Spooling",
+            "C": "Compiling",
+            "D": "Booting"
+          },
+          "correct_option": "A",
+          "explanation": "Paging divides virtual memory into pages and physical memory into frames."
+        },
+        {
+          "id": "MCQ-OS-05",
+          "question": "What is a thread?",
+          "options": {
+            "A": "A smallest unit of execution within a process",
+            "B": "A physical storage disk",
+            "C": "A type of printer",
+            "D": "A database table"
+          },
+          "correct_option": "A",
+          "explanation": "A thread is an execution unit within a process; threads in the same process share its resources."
+        }
+      ]
+    },
+    "computer_networks": {
+      "name": "Computer Networks",
+      "questions": [
+        {
+          "id": "MCQ-CN-01",
+          "question": "Which protocol is commonly used to securely access websites?",
+          "options": {
+            "A": "HTTP",
+            "B": "HTTPS",
+            "C": "FTP",
+            "D": "SMTP"
+          },
+          "correct_option": "B",
+          "explanation": "HTTPS uses TLS to encrypt communication between a browser and a website."
+        },
+        {
+          "id": "MCQ-CN-02",
+          "question": "Which device forwards packets between different networks?",
+          "options": {
+            "A": "Keyboard",
+            "B": "Router",
+            "C": "Monitor",
+            "D": "Repeater only"
+          },
+          "correct_option": "B",
+          "explanation": "A router forwards packets between networks using network-layer addressing."
+        },
+        {
+          "id": "MCQ-CN-03",
+          "question": "What is the main purpose of DNS?",
+          "options": {
+            "A": "Convert domain names to IP addresses",
+            "B": "Compress images",
+            "C": "Encrypt files on a disk",
+            "D": "Allocate CPU time"
+          },
+          "correct_option": "A",
+          "explanation": "DNS resolves human-readable domain names to IP addresses and related records."
+        },
+        {
+          "id": "MCQ-CN-04",
+          "question": "Which transport protocol provides reliable, ordered delivery?",
+          "options": {
+            "A": "UDP",
+            "B": "IP",
+            "C": "TCP",
+            "D": "ARP"
+          },
+          "correct_option": "C",
+          "explanation": "TCP provides connection-oriented, reliable, ordered byte-stream delivery."
+        },
+        {
+          "id": "MCQ-CN-05",
+          "question": "How many layers are in the OSI reference model?",
+          "options": {
+            "A": "4",
+            "B": "5",
+            "C": "6",
+            "D": "7"
+          },
+          "correct_option": "D",
+          "explanation": "The OSI model has seven layers, from Physical through Application."
+        }
+      ]
+    },
+    "system_design": {
+      "name": "System Design",
+      "questions": [
+        {
+          "id": "MCQ-SD-01",
+          "question": "What is the main purpose of a load balancer?",
+          "options": {
+            "A": "Distribute incoming traffic across multiple servers",
+            "B": "Store passwords in plain text",
+            "C": "Write frontend code",
+            "D": "Replace a database"
+          },
+          "correct_option": "A",
+          "explanation": "A load balancer distributes requests among servers to improve availability and capacity."
+        },
+        {
+          "id": "MCQ-SD-02",
+          "question": "What is caching used for in a web application?",
+          "options": {
+            "A": "Increase repeated computation",
+            "B": "Store frequently used data for faster access",
+            "C": "Delete the database",
+            "D": "Disable networking"
+          },
+          "correct_option": "B",
+          "explanation": "Caching keeps frequently accessed data in a faster storage layer to reduce latency and backend load."
+        },
+        {
+          "id": "MCQ-SD-03",
+          "question": "What does scalability mean in system design?",
+          "options": {
+            "A": "The system can handle growth in users or workload",
+            "B": "The system can only run on one computer",
+            "C": "The application has no database",
+            "D": "The code has more comments"
+          },
+          "correct_option": "A",
+          "explanation": "Scalability is the ability to handle increased workload by adding or using resources effectively."
+        },
+        {
+          "id": "MCQ-SD-04",
+          "question": "Why might an application use a database index?",
+          "options": {
+            "A": "To speed up suitable data lookups",
+            "B": "To guarantee every query is free",
+            "C": "To remove all duplicate records automatically",
+            "D": "To replace database backups"
+          },
+          "correct_option": "A",
+          "explanation": "Indexes can speed up lookups and sorting on indexed columns, while adding storage and write overhead."
+        },
+        {
+          "id": "MCQ-SD-05",
+          "question": "What is the purpose of a REST API in a web system?",
+          "options": {
+            "A": "Allow systems to communicate using resource-based HTTP operations",
+            "B": "Cool the server hardware",
+            "C": "Compile Java code",
+            "D": "Manage keyboard input"
+          },
+          "correct_option": "A",
+          "explanation": "REST-style APIs expose resources and use standard HTTP methods such as GET, POST, PUT, and DELETE."
+        }
+      ]
+    },
+    "dsa": {
+      "name": "DSA",
+      "questions": [
+        {
+          "id": "MCQ-DSA-01",
+          "question": "What is the time complexity of accessing an element by index in a Python list?",
+          "options": {
+            "A": "O(1) average",
+            "B": "O(n)",
+            "C": "O(n²)",
+            "D": "O(log n)"
+          },
+          "correct_option": "A",
+          "explanation": "Python lists support direct indexed access in constant time, O(1)."
+        },
+        {
+          "id": "MCQ-DSA-02",
+          "question": "Which data structure follows LIFO (Last In, First Out)?",
+          "options": {
+            "A": "Queue",
+            "B": "Stack",
+            "C": "Linked list only",
+            "D": "Tree"
+          },
+          "correct_option": "B",
+          "explanation": "A stack removes the most recently added item first."
+        },
+        {
+          "id": "MCQ-DSA-03",
+          "question": "Which data structure follows FIFO (First In, First Out)?",
+          "options": {
+            "A": "Stack",
+            "B": "Graph",
+            "C": "Queue",
+            "D": "Heap"
+          },
+          "correct_option": "C",
+          "explanation": "A queue removes items in the same order in which they were inserted."
+        },
+        {
+          "id": "MCQ-DSA-04",
+          "question": "What is the time complexity of binary search on a sorted array?",
+          "options": {
+            "A": "O(n)",
+            "B": "O(n²)",
+            "C": "O(log n)",
+            "D": "O(1) always"
+          },
+          "correct_option": "C",
+          "explanation": "Binary search halves the search interval at each step, giving O(log n) time."
+        },
+        {
+          "id": "MCQ-DSA-05",
+          "question": "Which technique uses a function calling itself to solve smaller versions of a problem?",
+          "options": {
+            "A": "Iteration only",
+            "B": "Recursion",
+            "C": "Hashing",
+            "D": "Linear search"
+          },
+          "correct_option": "B",
+          "explanation": "Recursion solves a problem by calling the same function on smaller subproblems until a base case is reached."
+        }
+      ]
+    },
+    "pharma_production_gmp": {
+      "name": "Pharma Production & GMP",
+      "questions": [
+        {
+          "id": "MCQ-PH-01",
+          "question": "What does GMP stand for in pharmaceutical manufacturing?",
+          "options": {
+            "A": "General Machine Process",
+            "B": "Good Manufacturing Practices",
+            "C": "Global Medicine Plan",
+            "D": "Good Material Purchase"
+          },
+          "correct_option": "B",
+          "explanation": "GMP means Good Manufacturing Practices and provides requirements to help ensure products are consistently produced and controlled to quality standards."
+        },
+        {
+          "id": "MCQ-PH-02",
+          "question": "What is the main purpose of an SOP in pharmaceutical production?",
+          "options": {
+            "A": "Provide approved step-by-step instructions",
+            "B": "Replace all training",
+            "C": "Avoid documentation",
+            "D": "Increase batch size"
+          },
+          "correct_option": "A",
+          "explanation": "An SOP documents an approved, repeatable procedure so work is performed consistently and correctly."
+        },
+        {
+          "id": "MCQ-PH-03",
+          "question": "What does BMR commonly stand for?",
+          "options": {
+            "A": "Batch Manufacturing Record",
+            "B": "Basic Machine Requirement",
+            "C": "Bulk Material Receipt",
+            "D": "Batch Market Report"
+          },
+          "correct_option": "A",
+          "explanation": "A Batch Manufacturing Record documents the materials, steps, checks, equipment and people involved in manufacturing a batch."
+        },
+        {
+          "id": "MCQ-PH-04",
+          "question": "Why is line clearance performed before starting a new batch?",
+          "options": {
+            "A": "To confirm the area is clear of previous product/materials and prevent mix-ups",
+            "B": "To increase machine speed",
+            "C": "To skip cleaning",
+            "D": "To change the product expiry date"
+          },
+          "correct_option": "A",
+          "explanation": "Line clearance checks that the area and equipment are ready and free from previous product, labels or materials that could cause mix-ups."
+        },
+        {
+          "id": "MCQ-PH-05",
+          "question": "What should an operator do if a production step deviates from the approved procedure?",
+          "options": {
+            "A": "Ignore it if production is nearly complete",
+            "B": "Change the record later",
+            "C": "Report and document it according to procedure",
+            "D": "Hide the affected batch"
+          },
+          "correct_option": "C",
+          "explanation": "A deviation must be promptly reported and accurately documented for assessment and investigation under the site's quality procedures."
+        }
+      ]
+    }
+  }
+}

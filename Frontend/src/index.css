@@ -1,0 +1,234 @@
+
+@import "tailwindcss";
+
+/* ==============================
+   PrepAI Dashboard Animations
+============================== */
+
+/* 1. Animated Welcome Gradient */
+.hero-animated {
+  background-size: 300% 300%;
+  animation: gradientMove 6s ease-in-out infinite;
+  will-change: background-position;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* 2. Floating Glow Effects */
+.glow-orb {
+  animation: floatGlow 5s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.glow-orb-delayed {
+  animation: floatGlow 7s ease-in-out infinite alternate-reverse;
+  will-change: transform;
+}
+
+@keyframes floatGlow {
+  0% {
+    transform: translate(0, 0) scale(0.9);
+    opacity: 0.35;
+  }
+  100% {
+    transform: translate(-45px, 30px) scale(1.3);
+    opacity: 0.9;
+  }
+}
+
+/* 3. Fade-up Entrance Animation */
+.animate-fade-up {
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hero: gradient + entrance animation together */
+.hero-animated.animate-fade-up {
+  animation:
+    gradientMove 6s ease-in-out infinite,
+    fadeUp 0.8s ease forwards;
+}
+
+/* 4. Feature Card Hover */
+.feature-card-animated {
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+.feature-card-animated:hover {
+  transform: translateY(-9px) scale(1.015);
+  box-shadow: 0 18px 45px rgba(37, 99, 235, 0.2);
+}
+
+/* 5. Feature Icon Hover */
+.feature-icon-animated {
+  transition: transform 0.4s ease;
+}
+
+.feature-card-animated:hover .feature-icon-animated {
+  transform: rotate(-10deg) scale(1.15);
+}
+
+/* 6. Reduced Motion Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .hero-animated,
+  .glow-orb,
+  .glow-orb-delayed,
+  .animate-fade-up,
+  .hero-animated.animate-fade-up {
+    animation: none;
+    opacity: 1;
+  }
+
+  .feature-card-animated,
+  .feature-icon-animated {
+    transition: none;
+  }
+}
+
+
+/* Strong visible animation for Welcome Banner */
+
+.animated-banner-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    #1649e8,
+    #6338dc,
+    #087ecb,
+    #4f46e5,
+    #1649e8
+  );
+  background-size: 400% 400%;
+  animation: bannerColorFlow 5s ease-in-out infinite;
+  z-index: 0;
+}
+
+@keyframes bannerColorFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* ==============================
+   PrepAI Global Theme System
+============================== */
+
+:root {
+  color-scheme: dark;
+}
+
+html[data-theme='dark'] {
+  color-scheme: dark;
+}
+
+html[data-theme='light'] {
+  color-scheme: light;
+  background: #f8fafc;
+}
+
+/* Smooth theme transition */
+body,
+body * {
+  transition-property: background-color, border-color, color;
+  transition-duration: 200ms;
+}
+
+/* Light mode: page backgrounds */
+html[data-theme='light'] body,
+html[data-theme='light'] .bg-slate-950 {
+  background-color: #f8fafc !important;
+}
+
+html[data-theme='light'] .bg-slate-900 {
+  background-color: #ffffff !important;
+}
+
+html[data-theme='light'] .bg-slate-800 {
+  background-color: #e2e8f0 !important;
+}
+
+html[data-theme='light'] .bg-slate-800\/50 {
+  background-color: #f1f5f9 !important;
+}
+
+/* Light mode: text */
+html[data-theme='light'] .text-white {
+  color: #0f172a !important;
+}
+
+html[data-theme='light'] .text-slate-300 {
+  color: #334155 !important;
+}
+
+html[data-theme='light'] .text-slate-400 {
+  color: #475569 !important;
+}
+
+html[data-theme='light'] .text-slate-500 {
+  color: #64748b !important;
+}
+
+/* Light mode: borders */
+html[data-theme='light'] .border-slate-800,
+html[data-theme='light'] .border-slate-700 {
+  border-color: #e2e8f0 !important;
+}
+
+/* Light mode: hover states */
+html[data-theme='light'] .hover\:bg-slate-800:hover {
+  background-color: #e2e8f0 !important;
+}
+
+html[data-theme='light'] .hover\:text-white:hover {
+  color: #0f172a !important;
+}
+
+/* Light mode: form controls */
+html[data-theme='light'] input,
+html[data-theme='light'] textarea,
+html[data-theme='light'] select {
+  background-color: #ffffff;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+
+html[data-theme='light'] input::placeholder,
+html[data-theme='light'] textarea::placeholder {
+  color: #94a3b8;
+}
+
+/* Keep animated welcome banner vibrant in both themes */
+html[data-theme='light'] .animated-banner-bg {
+  color: white;
+}
