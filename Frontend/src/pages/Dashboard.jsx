@@ -16,10 +16,12 @@ import {
   Sun,
   Moon,
   X,
+  Menu,
 } from 'lucide-react'
 
 function Dashboard() {
   const navigate = useNavigate()
+  const [menuOpen, setMenuOpen] = useState(false)
 
   // Get logged-in user details
   const user = JSON.parse(localStorage.getItem('user') || '{}')
@@ -134,8 +136,21 @@ function Dashboard() {
   return (
     <div className="min-h-screen bg-slate-950 text-white flex">
 
-      {/* Sidebar */}
-      <aside className="hidden md:flex w-64 shrink-0 bg-slate-900 border-r border-slate-800 flex-col p-6">
+        {/* Sidebar */}
+         <aside   className={`fixed inset-y-0 left-0 z-50 w-64 shrink-0 bg-slate-900 border-r border-slate-800 flex flex-col p-6 overflow-y-auto transform transition-transform duration-300 ${
+         menuOpen ? 'translate-x-0' : '-translate-x-full'}   
+         md:static md:translate-x-0 md:flex`}
+         >
+        
+        {/* Mobile Close Button */}
+        <button
+         onClick={() => setMenuOpen(false)}
+         className="md:hidden self-end mb-4 p-2 rounded-lg text-slate-400 hover:bg-slate-800 hover:text-white transition"
+         aria-label="Close sidebar"
+        >
+         <X size={22} />
+        </button>
+
 
         {/* Brand */}
         <h1 className="text-3xl font-bold tracking-wide mb-10">
@@ -236,6 +251,14 @@ function Dashboard() {
         </div>
       </aside>
 
+      {/* Mobile Sidebar Overlay */}
+      {menuOpen && (
+       <div
+        className="fixed inset-0 z-40 bg-black/50 md:hidden"
+        onClick={() => setMenuOpen(false)}
+       />
+      )}
+
       {/* Main Content */}
       <main className="flex-1 min-w-0">
 
@@ -244,6 +267,15 @@ function Dashboard() {
           id="dashboard-top"
           className="h-20 border-b border-slate-800 flex items-center justify-between px-5 sm:px-8 lg:px-10"
         >
+
+        {/* Mobile Menu Button */}
+        <button
+           onClick={() => setMenuOpen(true)}
+           className="md:hidden p-2 rounded-lg text-slate-300 hover:bg-slate-800 transition"
+           aria-label="Open sidebar"
+        >
+          <Menu size={24} />
+        </button>  
 
           <div>
             <p className="text-slate-400 text-sm">
